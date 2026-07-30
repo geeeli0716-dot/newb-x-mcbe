@@ -68,7 +68,7 @@ vec3 nlLighting(
 
     // shadow cast by sun light
     float shadow = step(0.93, uv1.y);
-    shadow = max(shadow, (1.0 - NL_SHADOW_INTENSITY + (0.6*NL_SHADOW_INTENSITY*nightIntensity))*lit.y);
+    shadow = max(shadow, (1.0 - NL_SHADOW_INTENSITY + (0.9*NL_SHADOW_INTENSITY*nightIntensity))*lit.y);
     shadow *= shade > 0.8 ? 1.0 : 0.8;
     #ifdef NL_CLOUD_SHADOW
       // shadow cast by simple clouds
