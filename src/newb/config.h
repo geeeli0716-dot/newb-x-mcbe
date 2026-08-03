@@ -30,16 +30,16 @@
 /* Color correction */
 #define NL_TONEMAP_TYPE 3              // 1:Exponential, 2:Reinhard, 3:Extended Reinhard, 4:ACES
 #define NL_GAMMA 1.33                  // 0.3 low ~ 2.0 high
-//#define NL_EXPOSURE 1.3              // [toggle] 0.5 dark ~ 3.0 bright
-#define NL_SATURATION 4.5            // [toggle] 0.0 grayscale ~ 4.0 super saturated
+#define NL_EXPOSURE 2.0              // [toggle] 0.5 dark ~ 3.0 bright
+#define NL_SATURATION 0.5            // [toggle] 0.0 grayscale ~ 4.0 super saturated
 //#define NL_TINT                      // [toggle] enable light/dark tone tinting
 #define NL_TINT_LOW  vec3(0.3,0.5,1.4) // color tint for dark tone
 #define NL_TINT_HIGH vec3(1.4,0.7,0.3) // color tint for light tone
 
 /* Lighting */
-#define NL_SUNLIGHT_INTENSITY   3.3  // 1.0 weak ~ 5.0 bright
+#define NL_SUNLIGHT_INTENSITY   4.0  // 1.0 weak ~ 5.0 bright
 #define NL_TORCHLIGHT_INTENSITY 1.0  // 0.5 weak ~ 3.0 bright
-#define NL_SHADOW_INTENSITY     0.0  // 0.0 no shadow ~ 1.0 strong shadow
+#define NL_SHADOW_INTENSITY     0.5  // 0.0 no shadow ~ 1.0 strong shadow
 #define NL_MIN_LIGHTING_BOOST   2.5  // 1.0 minimal lighting boost for dark areas ~ 3.0 brighter dark areas
 //#define NL_BLINKING_TORCH  // [toggle] flickering light
 #define NL_CLOUD_SHADOW      // [toggle] cloud shadow (simple clouds only)
@@ -62,7 +62,7 @@
 /* Fog */
 #define NL_FOG 0.1                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.18      // 0.0 no mist ~ 1.0 misty
-#define NL_RAIN_MIST_OPACITY 0.12 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
+#define NL_RAIN_MIST_OPACITY 0.3 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
 #define NL_CLOUDY_FOG 0.1         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky */
@@ -199,7 +199,7 @@
 #define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
 
 /* Sky reflection */
-#define NL_GROUND_REFL 0.1       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky
+#define NL_GROUND_REFL 1.0       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky
 #define NL_GROUND_RAIN_WETNESS 1.0 // 0.0 no wetness ~ 1.0 fully wet blocks when raining
 #define NL_GROUND_RAIN_PUDDLES 1.0 // 0.0 no puddles ~ 1.0 puddles
 
